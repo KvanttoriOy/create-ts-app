@@ -1,0 +1,24 @@
+{
+  "name": "create-ts-app",
+  "version": "1.0.0",
+  "description": "Collection of shell scripts to create a simple TypeScript app with Jest and ESlint.",
+  "keywords": [
+    "typescript",
+    "jest",
+    "eslint",
+    "shell"
+  ],
+  "author": "Juhana Kuparinen",
+  "license": "MIT",
+  "bin": {
+    "create-ts-app": "./create-ts-app.bash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KvanttoriOy/create-ts-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KvanttoriOy/create-ts-app/issues"
+  },
+  "homepage": "https://github.com/KvanttoriOy/create-ts-app#readme"
+}
