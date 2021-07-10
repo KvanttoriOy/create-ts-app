@@ -1,6 +1,6 @@
 {
   "name": "@kvanttori/create-ts-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Collection of shell scripts to create a simple TypeScript app with Jest and ESlint.",
   "keywords": [
     "typescript",
