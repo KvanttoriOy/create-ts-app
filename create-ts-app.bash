@@ -64,18 +64,20 @@ echo "test('Dummy test', () => {
 });" >> tests/dummy.test.ts
 
 # Git
+touch .gitignore
+echo "node_modules
+build" >> .gitignore
+
 # https://stackoverflow.com/a/38088814
 inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
 
 if [ "$inside_git_repo" ]; then
   echo "inside git repo, skipping init..."
+  git add .
+  git commit -m "initial commit"
 else
   echo "not in git repo, initializing..."
   git init
-  touch .gitignore
-  echo "node_modules
-  build" >> .gitignore
-
   git add .
   git commit -m "initial commit"
 fi
