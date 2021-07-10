@@ -46,6 +46,10 @@ sed -i '' '/"module": "commonjs",/a \
 
 # ESlint
 npx eslint --init
+touch .eslintignore
+echo "jest.config.js
+build
+node_modules" >> .eslintignore
 
 # Placeholder index.ts
 touch index.ts
