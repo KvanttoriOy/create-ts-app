@@ -10,3 +10,12 @@ npx create-ts-app myapp
 ```
 
 And you should have a TypeScript project with ESlint and Jest configured in no time!
+
+### Publishing
+
+```bash
+npm login
+npm publish
+```
+
+remember to bump the version!
