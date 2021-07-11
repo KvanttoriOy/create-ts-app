@@ -1,7 +1,6 @@
 #!/bin/bash
 
-# NOTE: These scripts have only been tested on the latest macOS.
-# Not sure if these will work with linux for example.
+# NOTE: Should work on macOS and GNU/Linux systems.
 # If this does not work on your machine, make a pr with fixes :)
 
 # Check argument
@@ -77,11 +76,10 @@ inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
 
 if [ "$inside_git_repo" ]; then
   echo "inside git repo, skipping init..."
-  git add .
-  git commit -m "initial commit"
 else
   echo "not in git repo, initializing..."
   git init
-  git add .
-  git commit -m "initial commit"
 fi
+
+git add .
+git commit -m "initial commit"
