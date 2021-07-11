@@ -24,10 +24,10 @@ npm init
 npm install --save-dev typescript eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser ts-node-dev jest @types/jest ts-jest
 
 # Delete useless test script
-sed -i '' '7d' package.json
+sed -i.bak '7d' package.json
 
 # Add necessary scripts
-sed -i '' '/"scripts":/a \
+sed -i.bak '/"scripts":/a \
     "tsc": "tsc",\
     "dev": "ts-node-dev ./index.ts",\
     "lint": "eslint --ext .ts .",\
@@ -39,10 +39,14 @@ npm run tsc -- --init
 npx ts-jest config:init
 
 # tsconfig.json outDir
-sed -i '' '17d' tsconfig.json
-sed -i '' '/"module": "commonjs",/a \
+sed -i.bak '17d' tsconfig.json
+sed -i.bak '/"module": "commonjs",/a \
     "outDir": "./build/",                           /* Redirect output structure to the directory. */\
 ' tsconfig.json
+
+# Remove sed backups
+rm package.json.bak
+rm tsconfig.json.bak
 
 # ESlint
 npx eslint --init
